@@ -18,5 +18,10 @@ namespace AgenceLogement
             Console.WriteLine($"Type : Studio");
             Console.WriteLine($"Meublé : {(meuble ? "Oui" : "Non")}");
         }
+
+        public override double CalculerLoyer()
+        {
+            return base.CalculerLoyer() + (meuble ? 50 : 0);
+        }
     }
 }

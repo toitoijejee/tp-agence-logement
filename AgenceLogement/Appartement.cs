@@ -22,5 +22,10 @@ namespace AgenceLogement
             Console.WriteLine($"Type : Appartement");
             Console.WriteLine($"Nombre de pièces : {nombrePieces}");
         }
+
+        public override double CalculerLoyer()
+        {
+            return base.CalculerLoyer() + (nombrePieces * 100);
+        }
     }
 }

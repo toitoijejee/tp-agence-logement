@@ -22,5 +22,10 @@ namespace AgenceLogement
             Console.WriteLine($"Type : Maison");
             Console.WriteLine($"Surface du jardin : {surfaceJardin} m²");
         }
+
+        public override double CalculerLoyer()
+        {
+            return base.CalculerLoyer() + (surfaceJardin * 10);
+        }
     }
 }
